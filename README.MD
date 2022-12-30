@@ -1,6 +1,6 @@
 # Flutter e Dart
 
-### Este projeto será para aprender fazer uma tela de login com um banco de dados local.
+### Este projeto será para aprender fazer uma tela de login com um banco de dados local..
 
 &nbsp;
 
