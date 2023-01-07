@@ -8,7 +8,8 @@ class AppLogin extends StatefulWidget {
 }
 
 class _AppLoginState extends State<AppLogin> {
-  bool _isChecked = true;
+  //final _isChecked = false;
+  bool _ocultapw = true;
 
   @override
   Widget build(BuildContext context) {
@@ -82,6 +83,7 @@ class _AppLoginState extends State<AppLogin> {
                       */
                       //obscureText: _obscurePassword,
                       //controller: _passwordInputController,
+                      obscureText: _ocultapw,
                       style: const TextStyle(color: Colors.white),
                       decoration: const InputDecoration(
                         labelText: "Senha",
@@ -125,10 +127,10 @@ class _AppLoginState extends State<AppLogin> {
               Row(
                 children: [
                   Checkbox(
-                    value: _isChecked,
+                    value: _ocultapw,
                     onChanged: (bool? value) {
                       setState(() {
-                        _isChecked = value!; // ainda a implementar
+                        _ocultapw = value!;
                       });
                     },
                     activeColor: Colors.blueGrey,
