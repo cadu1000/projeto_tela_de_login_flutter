@@ -16,7 +16,7 @@ class _AppLoginState extends State<AppLogin> {
       body: Container(
         height: MediaQuery.of(context).size.height,
         padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 30),
-        color: const Color.fromARGB(255, 4, 37, 44),
+        color: const Color.fromARGB(255, 2, 2, 33),
         //
         child: SingleChildScrollView(
           child: Column(
@@ -40,6 +40,10 @@ class _AppLoginState extends State<AppLogin> {
                   fontSize: 24,
                   fontWeight: FontWeight.normal,
                 ),
+              ),
+              const Text(
+                "", // Espaçamento porem ver melhor maneira
+                textAlign: TextAlign.center,
               ),
               Form(
                 child: Column(
@@ -136,6 +140,59 @@ class _AppLoginState extends State<AppLogin> {
                     ),
                   )
                 ],
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(
+                      const Color.fromARGB(255, 77, 137, 185)),
+                  shape: MaterialStateProperty.all<OutlinedBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                  ),
+                ),
+                child: const Text(
+                  "Login",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 14),
+                child: Divider(
+                  color: Color.fromARGB(255, 48, 110, 141),
+                ),
+              ),
+              const Text(
+                "Ainda não tem cadastro?",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 15, color: Colors.amber),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                // ignore: deprecated_member_use
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                        const Color.fromARGB(255, 77, 137, 185)),
+                    shape: MaterialStateProperty.all<OutlinedBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                    ),
+                  ),
+                  child: const Text(
+                    "Cadastre-se",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
               ),
             ], //children
           ),
@@ -276,7 +333,7 @@ body: Container(
                     ),
                   )
                 ],
-              ),
+              ),//Row
               ElevatedButton(
                 onPressed: () {
                   _doLogin();
@@ -297,7 +354,7 @@ body: Container(
                     ),
                   ),
                 ),
-              ),
+              ), // ElevatedButton
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10),
                 child: Divider(
