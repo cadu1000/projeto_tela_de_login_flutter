@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_tela_de_login/register.dart';
 
 class AppLogin extends StatefulWidget {
   const AppLogin({super.key});
@@ -128,9 +129,9 @@ class _AppLoginState extends State<AppLogin> {
                 children: [
                   Checkbox(
                     value: _ocultapw,
-                    onChanged: (bool? value) {
+                    onChanged: (bool? newValue) {
                       setState(() {
-                        _ocultapw = value!;
+                        _ocultapw = newValue!;
                       });
                     },
                     activeColor: Colors.blueGrey,
@@ -177,7 +178,12 @@ class _AppLoginState extends State<AppLogin> {
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 // ignore: deprecated_member_use
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Register()),
+                    );
+                  },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
                         const Color.fromARGB(255, 77, 137, 185)),
